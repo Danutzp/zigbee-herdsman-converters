@@ -156,4 +156,13 @@ export const definitions: DefinitionWithExtend[] = [
         toZigbee: [],
         exposes: [e.water_leak(), e.battery_low()],
     },
+    {
+        zigbeeModel: ["SZ-WTD03N-CZ3"],
+        model: "SZ-WTD03N-CZ3",
+        vendor: "Sercomm",
+        description: "Water leak detector",
+        fromZigbee: [fz.ias_water_leak_alarm_1, fz.battery, fz.temperature],
+        toZigbee: [],
+        exposes: [e.water_leak(), e.battery_low(), e.temperature(), e.alarm_1(), e.alarm_2(), e.tamper(), e.linkquality()],
+    },
 ];
