@@ -151,7 +151,7 @@ const definitions = [
         zigbeeModel: ['SZ-WTD03N-CZ3'],
         model: 'SZ-WTD03N-CZ3',
         vendor: 'Sercomm Corp.',
-        description: 'Automatically generated definition',
+        description: 'Water leak detector',
         extend: [m.battery(), m.temperature(), m.iasZoneAlarm({"zoneType":"generic","zoneAttributes":["alarm_1","alarm_2","tamper","battery_low"]})],
         meta: {},
     },
