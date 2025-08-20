@@ -5,7 +5,7 @@ import * as reporting from '../lib/reporting';
 import {Definition} from '../lib/types';
 const e = exposes.presets;
 
-const definitions: Definition[] = [
+const definitions = [
     {
         zigbeeModel: ['SZ-ESW01'],
         model: 'SZ-ESW01',
@@ -150,11 +150,10 @@ const definitions: Definition[] = [
     {
         zigbeeModel: ['SZ-WTD03N-CZ3'],
         model: 'SZ-WTD03N-CZ3',
-        vendor: 'Sercomm',
-        description: 'Water leak detector',
-        fromZigbee: [fz.ias_water_leak_alarm_1, fz.battery],
-        toZigbee: [],
-        exposes: [e.water_leak(), e.battery_low(),  e.tamper(), e.alarm_1(), alarm_2(), e.temperature()],
+        vendor: 'Sercomm Corp.',
+        description: 'Automatically generated definition',
+        extend: [m.battery(), m.temperature(), m.iasZoneAlarm({"zoneType":"generic","zoneAttributes":["alarm_1","alarm_2","tamper","battery_low"]})],
+        meta: {},
     },
 ];
 
